@@ -10,7 +10,7 @@ export default function HomePage() {
     ];
 
     return (
-        <section className="hero">
+        <section className="hero" id="hero">
             <div className="text-container">
                 <h2>
                     Bonjour, je suis{" "}

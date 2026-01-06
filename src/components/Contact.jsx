@@ -3,7 +3,11 @@ import "./../styles/Contact.css";
 export default function Contact() {
     return (
         <section id="contact" className="contact">
-            <h2>Contactez-moi</h2>
+            <div className="text-container">
+                <h2>Contactez-moi</h2>
+                <p>Je suis dispo pour discuter et collaborer 🚀</p>
+            </div>
+
             <form>
                 <input type="text" placeholder="Votre nom" required />
                 <input type="email" placeholder="Votre email" required />
@@ -11,5 +15,7 @@ export default function Contact() {
                 <button type="submit">Envoyer</button>
             </form>
         </section>
+        
     );
 }
+

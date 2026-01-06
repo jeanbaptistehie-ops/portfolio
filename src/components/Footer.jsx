@@ -3,7 +3,7 @@ export default function Footer() {
         <footer className="footer">
             <div className="footer-container">
                 <p className="footer-copy">
-                    © {new Date().getFullYear()} Jean-Baptiste Hie. Tous droits réservés.
+                    © {new Date().getFullYear()} <span>Jean-Baptiste</span> <span className="surname">Hie</span>. Tous droits réservés.
                 </p>
             </div>
         </footer>

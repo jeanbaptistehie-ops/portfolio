@@ -4,7 +4,7 @@
     justify-content: space-between;
     height: 100vh;
     padding: 0 50px;
-    background: linear-gradient(135deg, #1c0033, #4b0082); /* violet sombre */
+    background: linear-gradient(135deg, #000000, #4b0082);
     color: #fff;
     font-family: 'Orbitron', sans-serif;
 }

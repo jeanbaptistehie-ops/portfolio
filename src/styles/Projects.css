@@ -1,31 +1,77 @@
 .projects {
-    background-color: #1a1a1a;
+    min-height: 100vh;
+    padding: 80px 20px;
+    background:  #000000;
     color: white;
+    font-family: 'Orbitron', sans-serif;
     text-align: center;
-    padding: 100px 20px;
 }
 
+/* Titre plus clean */
+.projects-title {
+    font-size: 2.2rem;
+    color: #a855f7;
+    margin-bottom: 30px;
+    text-shadow: 0 0 4px #a855f7, 0 0 8px rgba(168, 85, 247, 0.3);
+}
+
+/* Liste des projets */
 .project-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    justify-items: center;
+    gap: 35px;
+    margin-top: 20px;
+    padding: 0 20px;
 }
 
+/* Carte projet */
 .project-card {
-    background-color: #222;
-    border-radius: 10px;
-    padding: 20px;
-    width: 280px;
-    transition: transform 0.3s ease;
+    background: linear-gradient(135deg, #000000, #4b0082);
+    border-radius: 14px;
+    padding: 18px;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 6px rgba(155, 89, 182, 0.25);
 }
 
+/* Effet hover soft */
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
 }
 
+/* Image */
 .project-card img {
     width: 100%;
     border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+/* Texte carte */
+.project-card h3 {
+    font-size: 1.3rem;
+    color: #f3e8ff;
+    margin-bottom: 8px;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #d8b4fe;
+    line-height: 1.5;
+    font-family: 'Arial', sans-serif;
+}
+
+/* ----- RESPONSIVE ----- */
+@media screen and (max-width: 768px) {
+    .projects-title {
+        font-size: 1.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects-title {
+        font-size: 1.7rem;
+    }
 }
