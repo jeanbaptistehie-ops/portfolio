@@ -2,35 +2,39 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+
+    height: var(--nav-height);
+    padding: 0 50px;
+
     background: rgba(28, 0, 51, 0.9);
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 100;
-    font-family: 'Orbitron', sans-serif;
 
-    /* Correction du dépassement */
+    font-family: 'Orbitron', sans-serif;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #9b59b6;
     text-shadow: 0 0 4px #9b59b6, 0 0 8px #8e44ad;
+    margin: 0;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 25px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li a {
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: #c39bd3;
     transition: all 0.2s ease;
     position: relative;
@@ -41,39 +45,56 @@
     text-shadow: 0 0 4px #f1c40f, 0 0 8px rgba(241, 196, 15, 0.4);
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-    .navbar {
-        padding: 15px 25px; /* padding réduit sur mobile */
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 20px;
-        margin-top: 15px;
-    }
-
-    .nav-links.open {
-        display: flex;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-}
-
+/* Hamburger */
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
+    background: transparent;
+    border: 0;
+    padding: 8px;
 }
 
 .hamburger span {
     display: block;
-    width: 25px;
+    width: 26px;
     height: 3px;
     background-color: #9b59b6;
     border-radius: 3px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0 16px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Menu dropdown */
+    .nav-links {
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+
+        display: none;
+        flex-direction: column;
+        gap: 14px;
+
+        padding: 16px;
+        background: rgba(28, 0, 51, 0.97);
+        border-bottom: 1px solid rgba(155, 89, 182, 0.3);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
 }

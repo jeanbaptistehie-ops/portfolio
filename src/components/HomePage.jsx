@@ -11,8 +11,8 @@ export default function HomePage() {
 
     return (
         <section className="hero" id="hero">
-            <div className="text-container">
-                <h2>
+            <div className="hero-text">
+            <h2>
                     Bonjour, je suis{" "}
                     <span className="animated-name">
                         {name.split("").map((letter, index) => (
@@ -23,7 +23,6 @@ export default function HomePage() {
                         ))}
                     </span>
                 </h2>
-                <br></br>
                 <a href="#projects" className="btn">Voir mes projets</a>
             </div>
             <img src={profile} alt="photo de profil" className="profile" />

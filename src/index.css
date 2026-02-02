@@ -2,16 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #0f172a; /* bleu foncé */
-  color: white;
-  font-family: 'Inter', sans-serif;
+:root{
+  --nav-height: 64px;
 }
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+}
+
+html, body{
+  width: 100%;
+  overflow-x: hidden;
+}
+:root{
+  --nav-height: 64px; /* hauteur navbar pour les ancres */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height); /* évite que le titre soit caché sous la navbar */
+}
+
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   overflow-x: hidden;
-  box-sizing: border-box;
 }
 
+body {
+  background-color: #0f172a;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}

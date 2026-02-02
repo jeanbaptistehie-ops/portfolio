@@ -1,55 +1,110 @@
 .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    padding: 40px 20px;
-    text-align: center;
-    font-family: 'Orbitron', sans-serif;
-    color: #e5e7eb;
+    padding: 28px 20px;
     box-sizing: border-box;
 
-    /* Fond violet doux similaire à HomePage mais sobre */
-    background: linear-gradient(135deg, #000000, #4b0082);
+    /* Style cohérent : sombre + violet néon, un peu "glass" */
+    background: linear-gradient(135deg, rgba(0,0,0,0.92), rgba(75,0,130,0.72));
+    border-top: 1px solid rgba(155, 89, 182, 0.25);
+    box-shadow: 0 -10px 30px rgba(155, 89, 182, 0.08);
+
+    font-family: 'Orbitron', sans-serif;
+    color: #e5e7eb;
 }
 
 .footer-container {
     max-width: 1100px;
+    margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
 }
 
-.footer-copy {
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    margin: 0;
     font-size: 1rem;
-    color: #e5e7eb;
-    opacity: 0;
-    animation: fadeIn 1s ease forwards;
+    letter-spacing: 0.5px;
+    color: #c39bd3;
+    text-shadow: 0 0 3px rgba(155, 89, 182, 0.25);
 }
 
-.footer-copy span {
-    color: #a855f7; /* violet doux */
-    text-shadow: 0 0 3px rgba(168, 85, 247, 0.3);
-}
-
-.footer-copy .surname {
+.footer-brand .surname {
     color: #d8b4fe;
-    opacity: 0.85;
+    opacity: 0.9;
+}
+
+.footer-links {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #c39bd3;
+    font-size: 0.95rem;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #f1c40f;
+    text-shadow: 0 0 4px rgba(241, 196, 15, 0.35);
+}
+
+/* petit underline néon au hover */
+.footer-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: rgba(241, 196, 15, 0.7);
+    transition: width 0.2s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+.footer-sep {
+    height: 1px;
+    margin: 14px 0 12px;
+    background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(155, 89, 182, 0.35),
+            transparent
+    );
+}
+
+.footer-copy {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    text-align: center;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .footer {
-        flex-direction: column;
-        padding: 30px 15px;
+        padding: 24px 16px;
     }
 
-    .footer-copy {
-        font-size: 0.9rem;
+    .footer-top {
+        justify-content: center;
+        text-align: center;
     }
-}
 
-/* Animation subtile */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(6px); }
-    to { opacity: 1; transform: translateY(0); }
+    .footer-links {
+        justify-content: center;
+    }
 }

@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 80px 20px;
+    min-height: calc(100svh - var(--nav-height));
+    padding: calc(var(--nav-height) + 24px) 20px 80px;
     background: #000000;
     color: white;
     font-family: 'Orbitron', sans-serif;

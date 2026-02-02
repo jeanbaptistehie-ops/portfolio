@@ -14,7 +14,7 @@
     text-align: center;
 }
 
-.text-container {
+.contact-text {
     margin-bottom: 25px;
 }
 
@@ -31,8 +31,7 @@
     opacity: 0.9;
 }
 
-/* Formulaire centré et responsive */
-form {
+.contact form {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -41,7 +40,8 @@ form {
     box-sizing: border-box;
 }
 
-input, textarea {
+.contact input,
+.contact textarea {
     padding: 12px;
     border-radius: 8px;
     border: 1px solid rgba(155, 89, 182, 0.3);
@@ -54,18 +54,19 @@ input, textarea {
     transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
-input:focus, textarea:focus {
+.contact input:focus,
+.contact textarea:focus {
     outline: none;
     transform: scale(1.02);
     box-shadow: 0 0 8px rgba(155, 89, 182, 0.35);
 }
 
-textarea {
+.contact textarea {
     resize: none;
     min-height: 120px;
 }
 
-button {
+.contact button {
     background-color: #9b59b6;
     color: white;
     padding: 12px;
@@ -79,7 +80,7 @@ button {
     box-shadow: 0 0 6px rgba(155, 89, 182, 0.25);
 }
 
-button:hover {
+.contact button:hover {
     transform: translateY(-2px) scale(1.04);
     box-shadow: 0 0 10px rgba(155, 89, 182, 0.4);
 }

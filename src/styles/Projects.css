@@ -1,6 +1,6 @@
 .projects {
-    min-height: 100vh;
-    padding: 80px 20px;
+    min-height: calc(100svh - var(--nav-height));
+    padding: calc(var(--nav-height) + 24px) 20px 80px;
     background:  #000000;
     color: white;
     font-family: 'Orbitron', sans-serif;
@@ -31,7 +31,7 @@
     border-radius: 14px;
     padding: 18px;
     width: 100%;
-    max-width: 300px;
+    max-width: 360px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 6px rgba(155, 89, 182, 0.25);
 }
